@@ -14,10 +14,7 @@ interface Modal {
 const Popup = ({ isOpen, setIsOpen, value }: Modal) => {
    const [modalOut, setModalOut] = useState(false);
    const [loading, setLoading] = useState(true);
-   const [refetch, setRefetch] = useRefetch((state) => [
-      state.refetch,
-      state.setRefetch,
-   ]);
+   const [setRefetch] = useRefetch((state) => [state.setRefetch]);
 
    const handleClose = () => {
       setModalOut(true);

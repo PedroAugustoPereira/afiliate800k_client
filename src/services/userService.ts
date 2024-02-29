@@ -5,6 +5,7 @@ export interface userUpdate {
    email?: string;
    name?: string;
    imagePerfil?: string;
+   firstTime?: boolean;
 }
 
 const userService = {

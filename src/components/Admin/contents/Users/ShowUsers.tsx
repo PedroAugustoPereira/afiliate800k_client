@@ -1,14 +1,11 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 
 import userService from '@/services/userService';
-import useUser, { User } from '@/states/user';
+import { User } from '@/states/user';
 
 const ShowUsers = () => {
    const [users, setUsers] = useState<User[]>([]);
-   const [user, setUser] = useUser((state) => [state.user, state.setUser]);
+   // const [user, setUser] = useUser((state) => [state.user, state.setUser]);
 
    const getUsers = async () => {
       const usersArray = await userService.getUsers();

@@ -7,7 +7,9 @@ const Header = () => {
 
    const handleJump = async () => {
       const setFirstTime = await userService.updateUser({ firstTime: false });
-      navigate('/');
+      if (setFirstTime) {
+         navigate('/');
+      }
    };
 
    return (

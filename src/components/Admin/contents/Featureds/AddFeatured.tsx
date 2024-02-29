@@ -1,6 +1,13 @@
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import { toast, ToastContainer, ToastOptions } from 'react-toastify';
+import {
+  toast,
+  ToastContainer,
+  ToastOptions,
+} from 'react-toastify';
 
 import { produtosDemonstrativos } from '@/pages/Home';
 import featuredProductService from '@/services/featuredProduct';
@@ -48,10 +55,6 @@ const AddFeatured = ({ setShowForm }: ProductProps) => {
       imageFeatured: null,
    });
 
-   const [imagesUrl, setImagesUrl] = useState({
-      imageMain: null,
-      imageEmpire: null,
-   });
 
    const handleChangeImages = (e: React.ChangeEvent<HTMLInputElement>) => {
       const target = e.target as HTMLInputElement;

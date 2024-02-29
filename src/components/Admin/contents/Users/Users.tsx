@@ -1,7 +1,4 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 
 import useMenu from '@/states/Admin/menu';
 
@@ -10,7 +7,7 @@ import ShowUsers from './ShowUsers';
 
 const Users = () => {
    const [showForm, setShowForm] = useState(false);
-   const [{ page, isRepeat }] = useMenu((state) => [state.dataMenu]);
+   const [{ isRepeat }] = useMenu((state) => [state.dataMenu]);
 
    useEffect(() => {
       if (isRepeat) {

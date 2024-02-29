@@ -1,7 +1,4 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 
 import productService from '@/services/productService';
 import useUser from '@/states/user';
@@ -31,7 +28,7 @@ interface Produto {
 const Product = ({ id }: propsProduct) => {
    const [productState, setProductState] = useState<Produto | null>(null);
    const [refetch, setRefetch] = useState(false);
-   const [user, setUser] = useUser((state) => [state.user, state.setUser]);
+   const [user] = useUser((state) => [state.user]);
 
    async function newAfiliate(e: React.MouseEvent<HTMLButtonElement>) {
       const id = e.currentTarget.id;

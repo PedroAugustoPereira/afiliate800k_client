@@ -150,16 +150,14 @@ const Home = () => {
       console.log(produtos);
    }, [produtos]);
 
-   function insideProduct(e) {}
-
-   const slides = [
-      { id: 1, name: 'Nome 1', percentage: '10%' },
-      { id: 2, name: 'Nome 2', percentage: '20%' },
-      { id: 3, name: 'Nome 3', percentage: '30%' },
-      { id: 4, name: 'Nome 4', percentage: '40%' },
-      { id: 5, name: 'Nome 5', percentage: '40%' },
-      { id: 6, name: 'Nome 6', percentage: '40%' },
-   ];
+   // const slides = [
+   //    { id: 1, name: 'Nome 1', percentage: '10%' },
+   //    { id: 2, name: 'Nome 2', percentage: '20%' },
+   //    { id: 3, name: 'Nome 3', percentage: '30%' },
+   //    { id: 4, name: 'Nome 4', percentage: '40%' },
+   //    { id: 5, name: 'Nome 5', percentage: '40%' },
+   //    { id: 6, name: 'Nome 6', percentage: '40%' },
+   // ];
 
    return (
       <>

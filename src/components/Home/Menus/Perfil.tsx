@@ -1,16 +1,8 @@
 import '@/styles/Perfil.scss';
 
-import {
-  useRef,
-  useState,
-} from 'react';
+import { useRef, useState } from 'react';
 
-import { useNavigate } from 'react-router-dom';
-import {
-  toast,
-  ToastContainer,
-  ToastOptions,
-} from 'react-toastify';
+import { toast, ToastContainer, ToastOptions } from 'react-toastify';
 
 import perfil from '@/assets/perfil2.png';
 import userService from '@/services/userService';
@@ -31,7 +23,6 @@ const Perfil = () => {
       email: user?.email || '',
       name: user?.name || '',
    });
-   const navigate = useNavigate();
 
    const [imageUrl, setImageUrl] = useState('');
    const [file, setFile] = useState<File | null>(null);
@@ -40,10 +31,7 @@ const Perfil = () => {
    const image = user?.imagePerfil
       ? `http://localhost:5000/api/images/${user?.imagePerfil}`
       : null;
-   const [refetch, setRefetch] = useRefetch((state) => [
-      state.refetch,
-      state.setRefetch,
-   ]);
+   const [setRefetch] = useRefetch((state) => [state.setRefetch]);
 
    const handleClick = () => {
       inputRef.current?.click();

@@ -1,13 +1,10 @@
 import { useState } from 'react';
 
-import { useNavigate } from 'react-router-dom';
-
 import ModalBottom from '@/components/Home/Modals/ModalBottom';
 
 import Perfil from './Perfil';
 
 const Config = () => {
-   const navigate = useNavigate();
    const [isModalPerfil, setIsModalPerfil] = useState(false);
 
    return (

@@ -31,7 +31,7 @@ const Login = () => {
 
    //verificação se o usuádrio está logado:
    useEffect(() => {
-      isLoggedIn(null, null);
+      isLoggedIn();
    }, []);
 
    //seta o valor dos estados conforme os inputs

@@ -72,7 +72,8 @@ const Welcome = () => {
                const setFirstTime = await userService.updateUser({
                   firstTime: false,
                });
-               navigate('/');
+
+               if (setFirstTime) navigate('/');
             }
          }
       }

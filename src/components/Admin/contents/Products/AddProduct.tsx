@@ -35,10 +35,10 @@ const AddProduct = ({ setShowForm }: ProductProps) => {
       imageEmpire: null,
    });
 
-   const [imagesUrl, setImagesUrl] = useState({
-      imageMain: null,
-      imageEmpire: null,
-   });
+   // const [imagesUrl, setImagesUrl] = useState({
+   //    imageMain: null,
+   //    imageEmpire: null,
+   // });
 
    const handleChangeImages = (e: React.ChangeEvent<HTMLInputElement>) => {
       const target = e.target as HTMLInputElement;
@@ -196,8 +196,7 @@ const AddProduct = ({ setShowForm }: ProductProps) => {
                      onChange={handleChange}
                      name="description"
                      id="message"
-                     rows="4"
-                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
+                     className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                      placeholder="Descrição do produto"
                   ></textarea>
                </div>
