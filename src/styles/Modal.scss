@@ -1,0 +1,22 @@
+.modal {
+   animation: slide-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.out {
+   animation: slide-down 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slide-up {
+   0% {
+      transform: translateY(100%);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+@keyframes slide-down {
+   0% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: translateY(100%);
+   }
+}

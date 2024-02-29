@@ -1,0 +1,24 @@
+.modal-left {
+   animation: slide-left 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.out-left {
+   animation: slide-right 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slide-left {
+   0% {
+      transform: translateX(100%);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
+
+@keyframes slide-right {
+   0% {
+      transform: translateX(0);
+   }
+   100% {
+      transform: translateX(100%);
+   }
+}
