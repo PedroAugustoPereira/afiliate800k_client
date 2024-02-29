@@ -18,7 +18,7 @@ const Account = () => {
                <img
                   src={
                      user?.imagePerfil
-                        ? `http://localhost:5000/api/images/${user?.imagePerfil}`
+                        ? `https://afiliate800k-api.vercel.app/api/images/${user?.imagePerfil}`
                         : perfil
                   }
                   className="w-14 h-14 rounded-full border-2 border-primary"

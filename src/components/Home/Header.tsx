@@ -22,7 +22,7 @@ const Header = ({ setModalUser }: Header) => {
                   className="h-10 w-10 rounded-3xl"
                   src={
                      user?.imagePerfil
-                        ? `http://localhost:5000/api/images/${user?.imagePerfil}`
+                        ? `https://afiliate800k-api.vercel.app/api/images/${user?.imagePerfil}`
                         : perfil
                   }
                   alt=""

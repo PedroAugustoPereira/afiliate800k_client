@@ -258,7 +258,7 @@ const Home = () => {
                                  <div className="w-full flex justify-center items-center flex-col">
                                     <div className="w-12 h-12 rounded-3xl outline  outline-[#f3f3f3] flex justify-center items-center">
                                        <img
-                                          src={`http://localhost:5000/api/images/${produto.product.imageEmpire}`}
+                                          src={`https://afiliate800k-api.vercel.app/api/images/${produto.product.imageEmpire}`}
                                           alt=""
                                        />
                                     </div>
@@ -471,7 +471,7 @@ const Home = () => {
                               <div className="px-6 py-4 bg-[#f3f3f3]">
                                  <div className="">
                                     <img
-                                       src={`http://localhost:5000/api/images/${product.imageMain}`}
+                                       src={`https://afiliate800k-api.vercel.app/api/images/${product.imageMain}`}
                                        alt=""
                                     />
                                  </div>
