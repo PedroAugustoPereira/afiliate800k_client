@@ -23,7 +23,15 @@ export interface UseUser {
 }
 
 const useUser = create<UseUser>((set) => ({
-   user: { _id: '', email: '', password: '', products: [], role: '' },
+   user: {
+      _id: '',
+      email: '',
+      password: '',
+      products: [],
+      role: '',
+      saldo: '',
+      saldoFicticio: '',
+   },
    setUser: (data: User | null) => set(() => ({ user: data })),
 }));
 
