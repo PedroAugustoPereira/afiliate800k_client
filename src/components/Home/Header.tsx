@@ -22,7 +22,7 @@ const Header = ({ setModalUser }: Header) => {
                   className="h-10 w-10 rounded-3xl"
                   src={
                      user?.imagePerfil
-                        ? `https://afiliate800k-api.onrender.com/api/images/${user?.imagePerfil}`
+                        ? `afiliate800k-api.onrender.com/api/images/${user?.imagePerfil}`
                         : perfil
                   }
                   alt=""
