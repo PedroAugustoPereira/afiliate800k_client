@@ -2,16 +2,10 @@ import '@/styles/Login.scss';
 import '@/styles/globals.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import {
-  toast,
-  ToastOptions,
-} from 'react-toastify';
+import { toast, ToastOptions } from 'react-toastify';
 
 import isLoggedIn from '@/middlewares/auth/isLoggedIn';
 import authService, { userLogin } from '@/services/authService';
@@ -36,9 +30,8 @@ const Login = () => {
 
    //verificação se o usuádrio está logado:
    useEffect(() => {
-      console.log("login";)
-      if(!isLoggedIn()) navigate('/login');
-      
+      console.log('login');
+      if (!isLoggedIn()) navigate('/login');
    }, []);
 
    //seta o valor dos estados conforme os inputs
