@@ -10,10 +10,16 @@ import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import 'swiper/css/grid';
 
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  Swiper,
+  SwiperSlide,
+} from 'swiper/react';
 
 import mercado from '@/assets/mercado.png';
 import panelas from '@/assets/panelas2.png';
@@ -314,7 +320,7 @@ const Home = () => {
                                  >
                                     <div className="w-12/12">
                                        <img
-                                          src={`http://localhost:5000/api/images/${produto.imageFeatured}`}
+                                          src={`https://afiliate800k-api.onrender.com/api/images/${produto.imageFeatured}`}
                                           alt=""
                                        />
                                     </div>
