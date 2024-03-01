@@ -2,10 +2,21 @@ import '@/styles/Login.scss';
 import '@/styles/globals.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import { Link, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer, ToastOptions } from 'react-toastify';
+import Cookies from 'js-cookie';
+import {
+  Link,
+  useNavigate,
+} from 'react-router-dom';
+import {
+  toast,
+  ToastContainer,
+  ToastOptions,
+} from 'react-toastify';
 
 import login from '@/assets/login.png';
 import isLoggedIn from '@/middlewares/auth/isLoggedIn';
@@ -62,15 +73,18 @@ const Login = () => {
             toast.error(data.message, toastOptions);
       } else {
          toast.success('Logado com sucesso', toastOptions);
-         loginBtn!.classList.remove('loading'),
-            setTimeout(() => {
-               console.log(data);
-               if (data.data.firstTime) {
-                  navigate('/bem-vindo');
-                  return;
-               }
-               navigate('/');
-            }, 2000);
+         console.log(data.data);
+         Cookies.set('accessToken', data.data.access_token);
+         Cookies.set('logged_in', 'true');
+         loginBtn!.classList.remove('loading');
+         setTimeout(() => {
+            console.log(data);
+            if (data.data.firstTime) {
+               navigate('/bem-vindo');
+               return;
+            }
+            navigate('/');
+         }, 2000);
       }
    };
 
