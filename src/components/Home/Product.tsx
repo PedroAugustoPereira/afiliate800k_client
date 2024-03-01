@@ -73,7 +73,7 @@ const Product = ({ id }: propsProduct) => {
                      {/* Imagem */}
                      <div className="flex justify-center">
                         <img
-                           src={`http://localhost:5000/api/images/${productState.imageMain}`}
+                           src={`https://afiliate800k-api.onrender.com/api/images/${productState.imageMain}`}
                            alt=""
                            className="w-11/12"
                         />

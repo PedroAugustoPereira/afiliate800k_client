@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'afiliate800k-api.onrender.com/';
+const baseUrl = 'https://afiliate800k-api.onrender.com/';
 console.log(baseUrl);
 
 const Api = axios.create({

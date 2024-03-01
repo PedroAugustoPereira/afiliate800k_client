@@ -16,7 +16,8 @@ const checkLoginStatus = async () => {
 const isLoggedIn = async () => {
    const user = await checkLoginStatus();
 
-   if (user) {
+   if (user && user.data.data !== undefined) {
+      console.log(user);
       return user.data.data.user;
    } else {
       return null;
