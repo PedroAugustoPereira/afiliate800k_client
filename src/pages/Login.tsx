@@ -2,11 +2,22 @@ import '@/styles/Login.scss';
 import '@/styles/globals.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+} from 'react';
 
-import { useNavigate } from 'react-router-dom';
-import { toast, ToastOptions } from 'react-toastify';
+import {
+  Link,
+  useNavigate,
+} from 'react-router-dom';
+import {
+  toast,
+  ToastContainer,
+  ToastOptions,
+} from 'react-toastify';
 
+import login from '@/assets/login.png';
 import isLoggedIn from '@/middlewares/auth/isLoggedIn';
 import authService, { userLogin } from '@/services/authService';
 
