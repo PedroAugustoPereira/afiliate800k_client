@@ -7,17 +7,12 @@ import {
   useState,
 } from 'react';
 
-import {
-  Link,
-  useNavigate,
-} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   toast,
-  ToastContainer,
   ToastOptions,
 } from 'react-toastify';
 
-import login from '@/assets/login.png';
 import isLoggedIn from '@/middlewares/auth/isLoggedIn';
 import authService, { userLogin } from '@/services/authService';
 
@@ -41,6 +36,7 @@ const Login = () => {
 
    //verificação se o usuádrio está logado:
    useEffect(() => {
+      console.log("login";)
       if(!isLoggedIn()) navigate('/login');
       
    }, []);
